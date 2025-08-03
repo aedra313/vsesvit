@@ -1,26 +1,37 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Базовые цвета */
+  --color-default:         #EEF0F8;  /* “Color” */
+  --color-neutral:         #7B8097;  /* “Neutral” */
+  --color-primary-neutral: #6774AE;  /* “Primary neutral” */
+
+  /* Тексты */
+  --color-primary-text:    #1F2D6A;  /* “Primary text” */
+  --color-secondary-text:  #465493;  /* “Secondary text” */
+
+  /* Состояния кнопок */
+  --color-hover-primary:   #172255;  /* “Hover primary” */
+  --color-primary-clicked: #112684;  /* “Primary clicked” */
+
+  /* Бэкграунд / фореґраунд */
+  --background: var(--color-default);
+  --foreground: var(--color-primary-text);
+
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  --background:               var(--background);
+  --foreground:               var(--foreground);
+  --color-default:            var(--color-default);
+  --color-neutral:            var(--color-neutral);
+  --color-primary-neutral:    var(--color-primary-neutral);
+  --color-primary-text:       var(--color-primary-text);
+  --color-secondary-text:     var(--color-secondary-text);
+  --color-hover-primary:      var(--color-hover-primary);
+  --color-primary-clicked:    var(--color-primary-clicked);
+  --font-sans:                var(--font-sans);
+  --font-mono:                var(--font-mono);
 }
